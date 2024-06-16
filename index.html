@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kibana to zendesk parser</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class=JSON_In_Wrapper>
+      <p id="labels">Username:<br>
+      Operating System:<br>
+      Hostname:<br>
+      Source IP:<br>
+      Filename:<br>
+      Hash:</p>
+      <label id=JSONLabel for="input">JSON/Manual Input:</label>
+      <textarea id="input" name="input" rows="25" cols="50" placeholder="Input raw JSON... Or...
+```
+username
+OS
+Host
+IP
+file
+hash
+```
+For ticket parsing of alert attributes given in a list. Needed for Malware/PUP integration"></textarea>
+      <div class="submit">
+      <button type="button" class="btn btn-primary" id="submit">Submit</button><br>
+    </div>
+    </div>
+
+
+
+    <div class="Zen_Out_Wrapper">
+      <label for="zenOut">Zendesk Markup Language Output:</label>
+      <br>
+      <textarea id="zenOut" name="zenOut" rows="25" cols="50">Output...</textarea>
+      <br>
+
+      <div class=MarkUpCopy>
+      <button type="button" class="btn btn-primary" id="zenMarkupButton">Copy markup to clipboard</button>
+    </div>
+    </div>
+
+
+
+    <div class="Zen_Out_Ticket_Wrapper">
+      <label for="zenTicketOutP">Zendesk Ticket Output</label>
+      <div class="paragraphTextWrapper"><p id=zenTicketOutP>Zendesk Ticket output will be here</p></div>
+      <br>
+
+      <div class=TicketCopy>
+      <button type="button" class="btn btn-primary" id="zenTicketButton">Copy ticket to clipboard</button>
+    </div>
+    </div>
+
+
+    <div class="Summary_Wrapper">
+      <label for="summary">Summary</label>
+      <div class="paragraphTextWrapper"><p id="summary">Case summary will be displayed here.</p></div>
+      <br>
+
+      <div class=SummaryCopy>
+      <button type="button" class="btn btn-primary" id="summaryID">Copy Summary to clipboard</button>
+    </div>
+    </div>
+
+    <div class="warning"><p id="warningID"></p></div>
+
+    <div class="VPN_Wrapper">
+      <label for="tick">Ticket</label>
+      <div class="paragraphTextWrapper"><p id="tick">Ticket will be displayed here.</p><br></div>
+      <br>
+
+      <div class="buttonWrapper">
+      <div class=VPNCopy>
+      <button type="button" class="btn btn-primary" id="VPNSummaryID">Run and Copy VPN integration</button>
+    </div>
+
+    <div class=MalCopy>
+      <button type="button" class="btn btn-primary" id="MalSummaryID">Run and Copy malware/pup integration</button>
+    </div>
+
+    <div class=UFNPCCopy>
+      <button type="button" class="btn btn-primary" id="UFNPCSummaryID">Run and Copy Users From Non-Permissible Country integration</button>
+    </div>
+
+    <div class=Ingress2Countries>
+      <button type="button" class="btn btn-primary" id="I2CSummaryID">Run and Copy User Ingress from 2 Countries integration</button>
+    </div>
+
+    <div class=passwordFile>
+      <button type="button" class="btn btn-primary" id="PFSummaryID">Run and Copy Password File found integration</button>
+    </div>
+
+    <div class=BruteForce>
+      <button type="button" class="btn btn-primary" id="BFID">Run and Copy brute force found integration</button>
+    </div>
+
+    </div>
+  </div>
+
+    
+  </div>
+</body>
+
+<script src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
